@@ -20,14 +20,15 @@ body {
   font-family: var(--primary-font-famili);
 }
 .list {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
 /* header */
+
 .container {
   outline: 2px solid tomato;
   width: 1230px;
@@ -38,6 +39,15 @@ body {
 }
 .container.button {
   margin-bottom: 34px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation {
+  display: flex;
+  align-items: center;
 }
 .logo {
   color: var(--akcent-text-color);
@@ -55,6 +65,17 @@ body {
 }
 
 /* Навигация сайта */
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+/* .site-nav:not(:last-child) {
+  margin-right: 50px;
+} */
+.site-nav .item + .item {
+  margin-left: 50px;
+}
 .site-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -71,6 +92,12 @@ body {
 }
 
 /* Навигация авторизации */
+.auth-nav {
+  display: flex;
+}
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
 .auth-nav .link {
   color: var(--secondary-text-color);
   font-weight: 500;

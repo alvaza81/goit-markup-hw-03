@@ -27,8 +27,16 @@ body {
 .link {
   text-decoration: none;
 }
-/* header */
+/* img {
+  display: block;
+  margin-right: 0;
+} */
 
+/* header */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 .container {
   outline: 2px solid tomato;
   width: 1230px;
@@ -43,7 +51,6 @@ body {
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .navigation {
   display: flex;
@@ -94,6 +101,7 @@ body {
 /* Навигация авторизации */
 .auth-nav {
   display: flex;
+  margin-left: auto;
 }
 .auth-nav .item + .item {
   margin-left: 50px;
@@ -115,6 +123,8 @@ body {
 .hero {
   background-color: var(--futer-bg-color);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   margin-top: 0;
@@ -151,8 +161,8 @@ body {
 
 /* Особенности работы */
 .section {
-  padding-top: 95px;
-  padding-bottom: 95px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   outline: 2px solid tomato;
 }
 .section.no-padding {
@@ -169,6 +179,12 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.feature-list {
+  display: flex;
+}
+.feature-list .item + .item {
+  margin-left: 30px;
 }
 .feature-list .title {
   margin-top: 0;
@@ -189,10 +205,20 @@ body {
 }
 
 /* Чем мы занимаемся */
-
+.work {
+  display: flex;
+  justify-content: space-between;
+}
+/* .work .item + .item {
+  margin-left: 30px;
+} */
 /* Наша команда */
 .team {
   background-color: var(--secondary-bg-color);
+}
+.team-list {
+  display: flex;
+  justify-content: space-between;
 }
 .team-lid {
   background-color: var(--primary-bg-color);
@@ -252,6 +278,13 @@ body {
 }
 
 /* portfolio */
+.project-filter {
+  display: flex;
+  justify-content: center;
+}
+.project-filter .item + .item {
+  margin-left: 8px;
+}
 .portfolio-button {
   color: var(--primary-text-color);
   /* background-color: var(--secondary-bg-color); */
@@ -272,7 +305,29 @@ body {
   color: var(--wite-text-color);
   background-color: var(--akcent-bg-color);
 }
-
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: teal;
+}
+.project-item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: tomato;
+}
+.project-item:nth-child(3n) {
+  margin-right: 0;
+}
+.project-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+.project-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 .project .title {
   margin-top: 0;
   margin-bottom: 4px;

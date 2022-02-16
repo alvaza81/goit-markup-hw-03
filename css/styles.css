@@ -36,9 +36,9 @@ body {
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+  border: 1px solid #ececec;
 }
 .container {
-  outline: 2px solid tomato;
   width: 1230px;
   padding-left: 15px;
   padding-right: 15px;
@@ -163,12 +163,10 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 2px solid tomato;
 }
 .section.no-padding {
   padding-top: 0;
   padding-bottom: 95px;
-  outline: 2px solid tomato;
 }
 
 .section-title {
@@ -182,6 +180,9 @@ body {
 }
 .feature-list {
   display: flex;
+}
+.feature-list .item {
+  width: calc((100% - 90px) / 4);
 }
 .feature-list .item + .item {
   margin-left: 30px;
@@ -207,21 +208,51 @@ body {
 /* Чем мы занимаемся */
 .work {
   display: flex;
-  justify-content: space-between;
 }
-/* .work .item + .item {
-  margin-left: 30px;
-} */
+
+.work .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+
+  background-color: tomato;
+}
+.work .item:nth-child(3n) {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+.work-foto {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* Наша команда */
 .team {
   background-color: var(--secondary-bg-color);
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
 .team-lid {
   background-color: var(--primary-bg-color);
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-lid:nth-child(4n) {
+  margin-right: 0;
+}
+.foto {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
 }
 .team-list .title {
   margin-top: 0;
@@ -244,8 +275,12 @@ body {
 /* ФУТЕР */
 .footer {
   background-color: var(--futer-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
+.address {
+  margin-top: 20px;
+}
 .post-address {
   color: var(--wite-text-color);
   font-style: normal;
@@ -315,6 +350,7 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: tomato;
+  padding-bottom: 20px;
 }
 .project-item:nth-child(3n) {
   margin-right: 0;
@@ -324,6 +360,9 @@ body {
 }
 .project-img {
   display: block;
+  max-width: 100%;
+  height: auto;
+
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -340,6 +379,8 @@ body {
 .project .paragraph {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 24;
+
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.87;
